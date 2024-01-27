@@ -19,15 +19,11 @@ public final class Constants {
     public static final int BLINKIN2 = 0;
 
 
-    public static final class Arm {
-        public static final int REAR_SHOULDER_CAN = 31;
-        public static final int FRONT_SHOULDER_CAN = 32;
-        public static final int ARM_EXTEND_CAN = 34;
-        public static final int SHOULDER_CANCODER = 33;
-        public static final int WRIST_CANCODER = 35;
-        public static final int ARM_CANCODER = 36;
-        public static final int WRIST_SPARK = 42;
-        public static final int ARM_LIMIT_SWITCH_DIO = 0;
+    public static final class Shooter {
+        public static final int SHOOTER_MOTOR_CAN = 100; //FIXME
+        public static final int SHOOTER_LEFT_PIVOT_CAN = 100; //FIXME
+        public static final int SHOOTER_RIGHT_PIVOT_CAN = 100; //FIXME
+
 
         public static final double maxShoulderVelocity = 0.9;
         public static final double maxShoulderAcceleration = 10;
@@ -35,13 +31,28 @@ public final class Constants {
         public static final double maxArmAcceleration = 1;
     }
 
+    public static final class Indexer {
+        public static final int INDEXER_CAN = 100; //FIXME
+        public static final int INDEXER_BEAM_BREAK_DIO = 10; //FIXME
+    }
+
     public static final class Intake{
-        public static int intake_TALON_CAN = 20;
-        public static final int intake_SOLENOID_F_CHANNEL = 4;
-        public static final int intake_SOLENOID_R_CHANNEL = 5;
+        public static int INTAKE_CAN = 100;
+        public static int INTAKE_PIVOT_CAN = 100;
 
         public static double maxWristVelocity = .5;
         public static double maxWristAcceleration = 15;
+
+        public static double intakeSpeed = 0.8;
+        public static double intakeUpPosition = 0;
+        public static double intakeDownPosition = 0.3;
+    }
+
+    public static final class Climber{
+        public static int CLIMBER_LEFT_CAN = 100; //FIXME
+        public static int CLIMBER_RIGHT_CAN = 100; //FIXME
+        public static double climberDownPosition = -0.1;
+        public static double climberUpPosition = 5;
     }
 
     public static final class Swerve {
@@ -127,7 +138,7 @@ public final class Constants {
             public static final int driveMotorID = 0;
             public static final int angleMotorID = 1;
             public static final int canCoderID = 8;
-            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(316);
+            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(0);
             public static final SwerveModuleConstants constants = 
                 new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
         }
@@ -137,7 +148,7 @@ public final class Constants {
             public static final int driveMotorID = 2;
             public static final int angleMotorID = 3;
             public static final int canCoderID = 9;
-            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(142);
+            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(0);
             public static final SwerveModuleConstants constants = 
                 new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
         }
@@ -147,7 +158,7 @@ public final class Constants {
             public static final int driveMotorID = 4;
             public static final int angleMotorID = 5;
             public static final int canCoderID = 10;
-            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(156);
+            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(0);
             public static final SwerveModuleConstants constants = 
                 new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
         }
@@ -157,7 +168,7 @@ public final class Constants {
             public static final int driveMotorID = 6;
             public static final int angleMotorID = 7;
             public static final int canCoderID = 11;
-            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(239);
+            public static final Rotation2d angleOffset = Rotation2d.fromDegrees(0);
             public static final SwerveModuleConstants constants = 
                 new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
         }
